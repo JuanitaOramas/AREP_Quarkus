@@ -1,20 +1,22 @@
 package org.acme.entities;
 
+import javax.persistence.Entity;
 import java.util.Date;
 
-public class tweet {
-    private int userid;
+public class tweet  {
+    private String username;
     private Date timestamp;
     private String description;
 
-    public tweet(int userid, Date updateTime, String description) {
-        this.userid = userid;
-        this.timestamp = updateTime;
+    public tweet(String username, String description, Date timestamp) {
+        this.username = username;
+        this.timestamp = timestamp;
         this.description = description;
     }
 
-    public int getUserid() {
-        return userid;
+
+    public String getUsername() {
+        return username;
     }
 
     public Date getTimestamp() {

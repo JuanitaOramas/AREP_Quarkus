@@ -9,17 +9,18 @@ import org.bson.Document;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Path("/tweets")
+
 public class tweets {
     @Inject
     MongoClient mongoClient;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public  List<String> getAllTweets() {
         MongoCollection<Document> collection = getCollection();
 
@@ -31,18 +32,16 @@ public class tweets {
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void postTweet(tweet tweet) {
+    public Response  postTweet(tweet t) {
         MongoCollection<Document> collection = getCollection();
-
-
-
         Document document = new Document()
-                .append("userName", tweet.getUserid())
-                .append("description", tweet.getDescription())
+                .append("username", t.getUsername())
+                .append("description", t.getDescription())
                 .append("timestamp", new Date());
 
         collection.insertOne(document);
+        return Response.status(Response.Status.CREATED).build();
+
     }
 
     public MongoCollection<Document> getCollection() {
