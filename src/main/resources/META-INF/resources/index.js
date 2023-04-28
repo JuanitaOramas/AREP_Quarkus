@@ -27,6 +27,8 @@ async function loginUser() {
             //const data = await response.json();
             
             window.location.href = "/tweetPage.html";
+            localStorage.setItem('currentUser', `${username}`);
+
         }
         }catch (error){
             console.error(error)

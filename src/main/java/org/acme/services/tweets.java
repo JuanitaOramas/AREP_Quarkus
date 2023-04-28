@@ -41,7 +41,8 @@ public class tweets {
                 .append("timestamp", new Date());
 
         collection.insertOne(document);
-        return Response.status(Response.Status.CREATED).build();
+        return Response.status(202).build();
+
 
     }
 

@@ -47,7 +47,7 @@
             color: #333;
         }
         
-        button {
+        input[type="button"] {
             display: block;
             margin: 0 auto;
             padding: 10px 20px;
@@ -59,42 +59,37 @@
             cursor: pointer;
         }
         
-        button:hover {
+        input[type="button"]:hover {
             background-color: #3E2152;
         }
         
-        button:active {
+        input[type="button"]:active {
             background-color: #3E2152;
         }
         
-        button:focus {
+        input[type="button"]:focus {
             outline: none;
             box-shadow: 0 0 0 2px #3E2152;
         }
         
-        button:disabled {
+        input[type="button"]:disabled {
             background-color: #d9d9d9;
             color: #777;
             cursor: not-allowed;
         }
         
-        button:disabled:hover {
+        input[type="button"]:disabled:hover {
             background-color: #d9d9d9;
         }
         
-        button:disabled:active {
+        input[type="button"]:disabled:active {
             background-color: #d9d9d9;
         }
         
-        button:disabled:focus {
+        input[type="button"]:disabled:focus {
             outline: none;
         }
         
-        .error {
-            color: #dc3545;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
     </style>
     <script src="index.js"></script>    
 
@@ -108,7 +103,7 @@
         <label for="password">password:</label>
         <input id="password" name="Password" type="password" placeholder="password"/>
         
-        <input type="button" onClick="loginUser()">Sig In</input>
+        <input  type="button" onClick="loginUser()" value="Sign in"/>
     </form>
 
 
