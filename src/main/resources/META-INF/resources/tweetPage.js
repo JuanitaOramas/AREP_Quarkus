@@ -3,7 +3,7 @@ const tweetsList = document.getElementById('tweetsList');
 console.log(tweetsList); // verifica que el elemento existe
 
 async function getTweets (){
-    const response = await fetch('http://localhost:8080/tweets');
+    const response = await fetch('http://52.91.117.36:8080/tweets');
     const tweets = await response.json();
     console.log(tweets);
     const tweetJSON = tweets.map(tweet => {
@@ -36,7 +36,7 @@ async function createTweet () {
             body: JSON.stringify(tweet)
         };
         try{
-            const response = await fetch("http://localhost:8080/tweets" , options);
+            const response = await fetch("http://52.91.117.36:8080/tweets" , options);
         
         if (response.status!==202) {
             alert("Username or password incorrect")
