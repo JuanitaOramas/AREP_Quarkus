@@ -18,7 +18,7 @@ async function loginUser() {
             body: JSON.stringify(user)
         };
         try{
-            const response = await fetch("http://localhost:8080/users" , options);
+            const response = await fetch("http://52.91.117.36:8080/users" , options);
         
         if (response.status!==202) {
             alert("Username or password incorrect")
@@ -42,7 +42,7 @@ const tweetsList = document.getElementById('tweetsList');
 console.log(tweetsList); // verifica que el elemento existe
 
 async function getTweets (){
-    const response = await fetch('http://localhost:8080/tweets');
+    const response = await fetch('http://52.91.117.36:8080/tweets');
     const tweets = await response.json();
         tweets.forEach(tweet => {
             const tweetItem = document.createElement('li');
@@ -74,7 +74,7 @@ var app = (function(){
                     body: JSON.stringify(user)
                 };
                 try{
-                const response = await fetch("http://localhost:8080/users" , options);
+                const response = await fetch("http://52.91.117.36:8080/users" , options);
                 if (response.status!==202) {
                     alert("Username or password incorrect")
                 }else{
