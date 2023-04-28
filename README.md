@@ -31,22 +31,29 @@ git clone https://github.com/JuanitaOramas/AREP_Quarkus.git
 ```
 # Arquitectura
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
-
 
 ## Solution 
 
 ### Formulario Log-in
+
+![img.png](img.png)
+
 ##### Usuario valido 
 
+![img_1.png](img_1.png)
+
 ##### Usuario invalido 
+
+![img_2.png](img_2.png)
 
 ### App
 Al ingresar a la aplicacion,  se puede ver el campo para agregar un nuevo tweet y los tweets antes publicados.
  
+![img_3.png](img_3.png)
 
 ### Video demostrativo
 
+https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/maria_oramas_mail_escuelaing_edu_co/Eb28-zWvVEpCjwxEywTTWzwB1bquD846xaFDXZ24t15eBw?e=aU6p0B
 
 
 ## Construido con:

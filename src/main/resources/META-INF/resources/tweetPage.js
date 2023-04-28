@@ -56,7 +56,7 @@ async function createTweet () {
 
 
  function logOut () {
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 }
 
 

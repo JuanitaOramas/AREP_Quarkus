@@ -26,7 +26,7 @@ async function loginUser() {
             console.log("entra entra :D");
             //const data = await response.json();
             
-            window.location.href = "/tweetPage.html";
+            window.location.href = "./tweetPage.html";
             localStorage.setItem('currentUser', `${username}`);
 
         }
@@ -90,7 +90,7 @@ var app = (function(){
         createTweet:function(){ },
 
         logOut:function(){
-            window.location.href = "/index.html";
+            window.location.href = "./index.html";
         }
 
 
