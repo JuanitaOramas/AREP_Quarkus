@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+         button {
+
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #3E2152;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3E2152;
+        }
+        ul li {
+            list-style: none;
+        }
+        .tweet-item {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+       }
+    </style>
+</head>
+
+<body>
+
+        <h2>AREP Tweets</h2>
+
+        <form id="tweet-form">
+            <input id="user" name="user" type="hidden"  value="1">
+            <textarea name="message" maxlength="140" placeholder="description"></textarea>
+            <button onclick="app.createTweet()">Publish</button>
+        </form>
+        
+
+    <br/>
+        <h3>Tweets</h3>
+        <ul id="tweetsList"></ul>
+        <button onclick="logOut()">Log Out</button>
+        
+    
+<script src="tweetPage.js"></script>
+
+</body>
+</html>

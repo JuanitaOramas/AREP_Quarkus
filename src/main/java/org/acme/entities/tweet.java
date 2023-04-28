@@ -1,6 +1,6 @@
 package org.acme.entities;
 
-import javax.persistence.Entity;
+//import javax.persistence.Entity;
 import java.util.Date;
 
 public class tweet  {

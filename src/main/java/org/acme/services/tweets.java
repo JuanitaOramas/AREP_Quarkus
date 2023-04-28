@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.services;
 
 import com.mongodb.client.MongoClient;
 import javax.inject.Inject;
@@ -8,7 +8,6 @@ import org.acme.entities.tweet;
 import org.bson.Document;
 
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,6 +19,7 @@ public class tweets {
     @Inject
     MongoClient mongoClient;
 
+    // GET
     @GET
     public  List<String> getAllTweets() {
         MongoCollection<Document> collection = getCollection();
@@ -31,6 +31,7 @@ public class tweets {
         return tweets;
     }
 
+    //POST
     @POST
     public Response  postTweet(tweet t) {
         MongoCollection<Document> collection = getCollection();
@@ -43,6 +44,7 @@ public class tweets {
         return Response.status(Response.Status.CREATED).build();
 
     }
+
 
     public MongoCollection<Document> getCollection() {
         return mongoClient.getDatabase("test").getCollection("tweets");
